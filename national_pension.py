@@ -71,7 +71,7 @@ class PensionData():
     def get_data(self):
         return self.df
 
-@st.cache_data
+@st.cache_resource
 def read_pensiondata():
     url = 'https://www.dropbox.com/s/nxeo1tziv05ejz7/national-pension.csv?dl=1'
     data = PensionData(url)
